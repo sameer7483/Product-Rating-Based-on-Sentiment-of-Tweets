@@ -39,17 +39,17 @@
   
 ### Algorithms for determining Sentiment of tweets:
   #### Supervised Learning 
-    * Decision Tree
-    * Random Forest
-    * Gaussian Naive Bayes
-    * Multinomial Naive Bayes
-    * Support Vector Classification
-    * Logistic Regression
-    * Neural Network
-    * Multi Layer perceptron
+  * Decision Tree
+  * Random Forest
+  * Gaussian Naive Bayes
+  * Multinomial Naive Bayes
+  * Support Vector Classification
+  * Logistic Regression
+  * Neural Network
+  * Multi Layer perceptron
   ##### Lexicon Based
-    * Dictionary based: Dictionary based sentiment analysis is based on comparison between the text or corpus with pre-established dictionaries of positive, negative and neutral words.
-    * Dictionary based with Score: Sentiment score of a tweet is given by the sum of positive and negative ratings of words in it.
+  * Dictionary based: Dictionary based sentiment analysis is based on comparison between the text or corpus with pre-established dictionaries of positive, negative and neutral words.
+  * Dictionary based with Score: Sentiment score of a tweet is given by the sum of positive and negative ratings of words in it.
  * Evaluation Parameters:
   * Accuracy
   * Precision
