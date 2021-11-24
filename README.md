@@ -263,24 +263,87 @@
   * Hamming Loss
   * Jaccard Similarity
   * Execution Time
-
-                           def Evaluation_parameters(y_test, y_pred, name):
-                            accuracy = accuracy_score(y_test, y_pred)
-                            precision = average_precision_score(y_test, y_pred)
-                            f1score = f1_score(y_test, y_pred)
-                            recall = recall_score(y_test, y_pred)
-                            cohen_kappa = cohen_kappa_score(y_test, y_pred)
-                            Hamming_loss = hamming_loss(y_test, y_pred)
-                            jaccard_similarity = jaccard_similarity_score(y_test, y_pred)
-                            Confusion_matrix = confusion_matrix(y_test, y_pred)
-
-                            plt.figure()
-                            plot_confusion_matrix(Confusion_matrix, classes=["Positive", "Negative"], title='Confusion matrix of ' + name)
-                            plt.show()
-
-                            return accuracy, precision, f1score, recall, cohen_kappa, Hamming_loss, jaccard_similarity, Confusion_matrix
+  
+  
+### Result Analysis:
+Some Abbreviation:
+• MNB – Multinomial Naïve Bayes
+• SVM – Support Vector Machine
+• LR – Logistic Regression
+• DB – Dictionary Based
+• DBS – Dictionary Based with Score
+Table 2: Comparison of Machine Learning Algorithms
+Evaluation Parameters
+MNB
+SVM
+LR
+DB
+DBS
+Remark
+Accuracy
+0.69
+0.70
+0.71
+0.62
+0.58
+Logistic Regression fits the data points as if they are along a continuous function.
+SVM fits a function (hyperplane) that attempts to separate two classes of data that could be of multiple dimensions.
+Precision
+0.64
+0.64
+0.65
+0.61
+0.56
+Logistic Regression makes a prediction for the probability using a direct functional form where as Naive Bayes figures out how the data was generated given the results.
+F1 Score
+0.71
+0.72
+0.73
+0.57
+0.64
+Decision trees in Random Forest algorithm chop up the feature space into rectangles (or in higher dimensions, hyper-rectangles). On other hand, logistic regression assumes that there is one smooth linear decision boundary.
+Recall
+0.75
+0.75
+0.77
+0.48
+0.71
+For relatively small amount of linearly separable data to perform simple classification tasks, LR is a great, robust model.
+Cohen kappa
+0.39
+0.40
+0.42
+0.26
+0.16
+SVM could have difficulty when the classes are not separable or there is not enough margin to fit a (n_dimensions - 1) hyperplane
+24
+between the two classes whereas Logistic Regression fits the data points as if they are along a continuous function.
+Hamming loss
+0.30
+0.29
+0.28
+0.37
+0.41
+Hamming Loss measures the hamming distance between the prediction of labels and the true label. Thus, smaller the value of Hamming Loss, more efficient is the algorithm.
+Jaccard Similarity
+0.69
+0.70
+0.71
+0.62
+0.58
+SVM has difficulty in training the data which are not linearly separable. On other hand, logistic regression assumes that there is one smooth linear decision boundary.
+Time
+0.17
+350
+0.15
+4.31
+6.07
+Execution time of different algorithms.
+                  
 
 ### Application: Using Sentiment Classification model to give ratings to various movies and products.
+
+
 
 
 
