@@ -36,3 +36,38 @@
     * The IDF of a rare word is high, whereas the IDF of a frequent word is likely to be low. Thus having the effect of highlighting words that are distinct.
     * We calculate TF-IDF value of a term as = TF * IDF
   * Word2Vector to reconstruct linguistic context of words
+  
+* Algorithms for determining Sentiment of tweets:
+  * Supervised Learning 
+    * Decision Tree
+    * Random Forest
+    * Gaussian Naive Bayes
+    * Multinomial Naive Bayes
+    * Support Vector Classification
+    * Logistic Regression
+    * Neural Network
+    * Multi Layer perceptron
+  * Lexicon Based
+    * Dictionary based: Dictionary based sentiment analysis is based on comparison between the text or corpus with pre-established dictionaries of positive, negative and neutral words.
+    * Dictionary based with Score: Sentiment score of a tweet is given by the sum of positive and negative ratings of words in it.
+ * Evaluation Parameters:
+  * Accuracy
+  * Precision
+  * F1Score
+  * Recall
+  * Cohen Kappa
+  * Hamming Loss
+  * Jaccard Similarity
+  * Execution Time
+### * Application: Using Sentiment Classification model to give ratings to various movies and products.
+
+
+
+
+
+
+
+
+
+
+
