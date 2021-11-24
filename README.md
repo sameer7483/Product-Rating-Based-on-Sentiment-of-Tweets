@@ -275,8 +275,7 @@ Some Abbreviation:
 
 | Evaluation Parameters | MNB | SVM | LR | DB | DBS | Remark |
 | --------------------- |:---:|:---:|:--:|:--:|:---:|:------:|
-| Accuracy | 0.69 | 0.70 | 0.71 | 0.62 | 0.58 |Logistic Regression fits the data points as if they are along a continuous function.
-SVM fits a function (hyperplane) that attempts to separate two classes of data that could be of multiple dimensions.|
+| Accuracy | 0.69 | 0.70 | 0.71 | 0.62 | 0.58 |Logistic Regression fits the data points as if they are along a continuous function.SVM fits a function (hyperplane) that attempts to separate two classes of data that could be of multiple dimensions.|
 
 
 
