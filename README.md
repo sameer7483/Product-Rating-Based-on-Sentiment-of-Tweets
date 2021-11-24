@@ -234,6 +234,10 @@ Some Abbreviation:
 
 ### Application: Using Sentiment Classification model to give ratings to various movies and products.
 
+I used this sentiment classification model to give ratings to various movies and products. In today’s world where data has been growing at an exponential rate it can be a great tool to know about the sentiment of masses. I have used twitter tweets as data to know about sentiment of people for a particular product or Movies.
+In this application when a keyword corresponding to a product or movie or any event is fed. Dynamically twitter tweets containing that key word starts to download. After enough data is fetched, it goes through series of data preprocessing operations and once we have obtained clean data then it is used by Machine Learning algorithm to come up with the rating corresponding to that product
+After going through analysis of various Machine Learning algorithms the best algorithm I could come up with was Linear Regression and therefore I have used Linear Regression to rate opinion of people based on their tweets on twitter.
+
 
 
 
