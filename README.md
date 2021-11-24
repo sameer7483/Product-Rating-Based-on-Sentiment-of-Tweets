@@ -6,7 +6,9 @@
 
 ## Brief Project Flow
 
-* Retrieving tweets content from twitter API
+![alt text](https://github.com/sameer7483/Product-Rating-Based-on-Sentiment-of-Tweets/blob/master/Flow.JPG)
+
+### Retrieving tweets content from twitter API
 ### Data Pre-processing:
   * Removal Non Printable characters
   * Removal of URLs
