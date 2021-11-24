@@ -25,62 +25,6 @@
   * Removal of Stop words
   * Removal of Non Dictionary words
   * Language Translation
-
-                           tweet = filter(lambda x: x in printable, row['tweet'])
-                           #print tweet
-
-                           a = re.sub(r"http\S+", "", tweet)   # Removing URLs
-                           a = html_parser.unescape(a)					   # Removing HTML characters
-                           a = RegexpReplacer().replace(a) 
-                           a = a.lower()            
-
-                           print a
-
-                           word_tokens = word_tokenize(a)                      # Tokenization
-                           stop_words = set(stopwords.words('english'))
-
-                           s = []
-                           for a in word_tokens:
-                            a = slang_replacer.replace(a)
-                            s.append(a)
-
-                           s = " ".join(s)
-                           s = str(s).translate(None, string.punctuation)   
-
-                           word_tokens = word_tokenize(s) 
-                           s = []
-                           for a in word_tokens:
-                            a = RepeatReplacer().replace(a)			
-                            a = a.split(" ")
-                            for i in a:
-                             i = SpellingReplacer().replace(i)
-                             i = i.split(" ")
-                             for j in i:
-                              j = lemmatizer.lemmatize(j)
-                              s.append(j)
-
-                           print s
-                           s = AntonymReplacer().replace_negations(s)
-
-                           p = []
-                           for a in s:
-                            if a not in stop_words:
-                             if a.isalpha():
-                              p.append(a)	 
-
-                           p = " ".join(w for w in p if w in words)
-                           p = re.sub(r'\b\w{1,2}\b', '', p)
-                           a = word_tokenize(p)
-                           length = len(a)
-
-                           p = " ".join(a)
-                           row['tweet'] = p
-
-                           if length >= 3:
-                            d = {'senti': [row['senti']], 'tweet': [row['tweet']]}
-                            df = pd.DataFrame(data=d)
-                            with open(output_file, 'a') as f:
-                             df.to_csv(f, header=False)
     
 ### Text Feature Extraction:
   * Representation of Bag of words using n-gram
@@ -276,67 +220,14 @@ Some Abbreviation:
 | Evaluation Parameters | MNB | SVM | LR | DB | DBS | Remark |
 | --------------------- |:---:|:---:|:--:|:--:|:---:|:------:|
 | Accuracy | 0.69 | 0.70 | 0.71 | 0.62 | 0.58 |Logistic Regression fits the data points as if they are along a continuous function.SVM fits a function (hyperplane) that attempts to separate two classes of data that could be of multiple dimensions.|
+| Precision | 0.64 | 0.64 | 0.65 | 0.61 | 0.56 |Logistic Regression makes a prediction for the probability using a direct functional form where as Naive Bayes figures out how the data was generated given the results.|
+| F1 Score | 0.71 | 0.72 | 0.73 | 0.57 | 0.64 |Decision trees in Random Forest algorithm chop up the feature space into rectangles (or in higher dimensions, hyper-rectangles). On other hand, logistic regression assumes that there is one smooth linear decision boundary.|
+| Recall | 0.75 | 0.75 | 0.75 | 0.48 | 0.71 |For relatively small amount of linearly separable data to perform simple classification tasks, LR is a great, robust model.|
+| Cohen kappa | 0.39 | 0.40 | 0.42 | 0.26 | 0.16 |SVM could have difficulty when the classes are not separable or there is not enough margin to fit a (n_dimensions - 1) hyperplane between the two classes whereas Logistic Regression fits the data points as if they are along a continuous function.|
+| Hamming loss | 0.30 | 0.29 | 0.28 | 0.37 | 0.41 |Hamming Loss measures the hamming distance between the prediction of labels and the true label. Thus, smaller the value of Hamming Loss, more efficient is the algorithm.|
+| Jaccard Similarity | 0.69 | 0.70 | 0.71 | 0.62 | 0.58 |SVM has difficulty in training the data which are not linearly separable. On other hand, logistic regression assumes that there is one smooth linear decision boundary..|
+| Time | 0.17 | 350 | 0.15 | 4.31 | 6.07 |Execution time of different algorithms (in seconds)|
 
-
-
-
-
-
-
-
-
-
-Precision
-0.64
-0.64
-0.65
-0.61
-0.56
-Logistic Regression makes a prediction for the probability using a direct functional form where as Naive Bayes figures out how the data was generated given the results.
-F1 Score
-0.71
-0.72
-0.73
-0.57
-0.64
-Decision trees in Random Forest algorithm chop up the feature space into rectangles (or in higher dimensions, hyper-rectangles). On other hand, logistic regression assumes that there is one smooth linear decision boundary.
-Recall
-0.75
-0.75
-0.77
-0.48
-0.71
-For relatively small amount of linearly separable data to perform simple classification tasks, LR is a great, robust model.
-Cohen kappa
-0.39
-0.40
-0.42
-0.26
-0.16
-SVM could have difficulty when the classes are not separable or there is not enough margin to fit a (n_dimensions - 1) hyperplane
-24
-between the two classes whereas Logistic Regression fits the data points as if they are along a continuous function.
-Hamming loss
-0.30
-0.29
-0.28
-0.37
-0.41
-Hamming Loss measures the hamming distance between the prediction of labels and the true label. Thus, smaller the value of Hamming Loss, more efficient is the algorithm.
-Jaccard Similarity
-0.69
-0.70
-0.71
-0.62
-0.58
-SVM has difficulty in training the data which are not linearly separable. On other hand, logistic regression assumes that there is one smooth linear decision boundary.
-Time
-0.17
-350
-0.15
-4.31
-6.07
-Execution time of different algorithms.
                   
 
 ### Application: Using Sentiment Classification model to give ratings to various movies and products.
