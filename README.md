@@ -238,7 +238,7 @@ I used this sentiment classification model to give ratings to various movies and
 In this application when a keyword corresponding to a product or movie or any event is fed. Dynamically twitter tweets containing that key word starts to download. After enough data is fetched, it goes through series of data preprocessing operations and once we have obtained clean data then it is used by Machine Learning algorithm to come up with the rating corresponding to that product
 After going through analysis of various Machine Learning algorithms the best algorithm I could come up with was Linear Regression and therefore I have used Linear Regression to rate opinion of people based on their tweets on twitter.
 
-
+![alt text](https://github.com/sameer7483/Product-Rating-Based-on-Sentiment-of-Tweets/blob/master/iphone.JPG)
 
 
 
