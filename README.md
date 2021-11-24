@@ -7,7 +7,7 @@
 ## Brief Project Flow
 
 * Retrieving tweets content from twitter API
-* Data Pre-processing:
+### * Data Pre-processing:
   * Removal Non Printable characters
   * Removal of URLs
   * Escaping HTML characters
@@ -25,7 +25,7 @@
   * Removal of Stop words
   * Removal of Non Dictionary words
   * Language Translation
-* Text Feature Extraction:
+### * Text Feature Extraction:
   * Representation of Bag of words using n-gram
   * Normalizing and Weighting with diminishing importance of
     * Tokens that are present in most of the samples and documents.
@@ -37,8 +37,8 @@
     * We calculate TF-IDF value of a term as = TF * IDF
   * Word2Vector to reconstruct linguistic context of words
   
-* Algorithms for determining Sentiment of tweets:
-  * Supervised Learning 
+### * Algorithms for determining Sentiment of tweets:
+  #### * Supervised Learning 
     * Decision Tree
     * Random Forest
     * Gaussian Naive Bayes
@@ -47,9 +47,9 @@
     * Logistic Regression
     * Neural Network
     * Multi Layer perceptron
-  * Lexicon Based
-    * Dictionary based: Dictionary based sentiment analysis is based on comparison between the text or corpus with pre-established dictionaries of positive, negative and neutral words.
-    * Dictionary based with Score: Sentiment score of a tweet is given by the sum of positive and negative ratings of words in it.
+  ##### * Lexicon Based
+    * * Dictionary based: * Dictionary based sentiment analysis is based on comparison between the text or corpus with pre-established dictionaries of positive, negative and neutral words.
+    * * Dictionary based with Score: * Sentiment score of a tweet is given by the sum of positive and negative ratings of words in it.
  * Evaluation Parameters:
   * Accuracy
   * Precision
@@ -59,7 +59,7 @@
   * Hamming Loss
   * Jaccard Similarity
   * Execution Time
-### * Application: Using Sentiment Classification model to give ratings to various movies and products.
+#### * Application: Using Sentiment Classification model to give ratings to various movies and products.
 
 
 
