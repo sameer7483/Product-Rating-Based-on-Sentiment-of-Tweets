@@ -213,12 +213,12 @@
   
   
 ### Result Analysis:
-Some Abbreviation:
-• MNB – Multinomial Naïve Bayes
-• SVM – Support Vector Machine
-• LR – Logistic Regression
-• DB – Dictionary Based
-• DBS – Dictionary Based with Score
+#### Some Abbreviation:
+* MNB – Multinomial Naïve Bayes
+* SVM – Support Vector Machine
+* LR – Logistic Regression
+* DB – Dictionary Based
+* DBS – Dictionary Based with Score
 
 | Evaluation Parameters | MNB | SVM | LR | DB | DBS | Remark |
 | --------------------- |:---:|:---:|:--:|:--:|:---:|:------:|
